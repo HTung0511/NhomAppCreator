@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoomieMatch – Tìm bạn ghép phòng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- ===== LEFT PANEL ===== -->
+    <div class="left-panel">
+      <div class="brand">
+        <div class="logo">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect width="28" height="28" rx="8" fill="white" fill-opacity="0.15"/>
+            <path d="M7 14C7 10.134 10.134 7 14 7C17.866 7 21 10.134 21 14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 17h3v4H4zM11 13h3v8h-3zM18 10h3v11h-3z" fill="white" fill-opacity="0.9"/>
+          </svg>
+          <span class="logo-text">RoomieMatch</span>
+        </div>
+      </div>
+
+      <div class="left-content">
+        <div class="hero-badge">✨ Nền tảng #1 cho sinh viên</div>
+        <h1 class="hero-title">
+          Tìm người ở ghép<br />
+          <span class="title-accent">phù hợp với bạn</span>
+        </h1>
+        <p class="hero-subtitle">
+          Kết nối dựa trên sở thích, thói quen sống và ngân sách —
+          không còn rủi ro khi tìm bạn cùng phòng.
+        </p>
+
+        <div class="stats-row">
+          <div class="stat-item">
+            <span class="stat-icon">👥</span>
+            <div class="stat-info">
+              <span class="stat-number">10.000+</span>
+              <span class="stat-label">Người dùng</span>
+            </div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-icon">🏠</span>
+            <div class="stat-info">
+              <span class="stat-number">2.500+</span>
+              <span class="stat-label">Cặp ghép thành công</span>
+            </div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-icon">⭐</span>
+            <div class="stat-info">
+              <span class="stat-number">4.8/5</span>
+              <span class="stat-label">Đánh giá</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-avatar">NT</div>
+          <div class="testimonial-body">
+            <p class="testimonial-text">"Tìm được bạn cùng phòng hợp ý chỉ trong 3 ngày. Tuyệt vời!"</p>
+            <span class="testimonial-author">Minh Tuấn — Sinh viên ĐH CMC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="left-decoration">
+        <div class="deco-circle deco-1"></div>
+        <div class="deco-circle deco-2"></div>
+      </div>
+    </div>
+
+    <!-- ===== RIGHT PANEL ===== -->
+    <div class="right-panel">
+      <div class="form-card">
+
+        <!-- Tab Switch -->
+        <div class="tab-switch">
+          <button class="tab-btn active" id="tab-login" onclick="switchTab('login')">Đăng nhập</button>
+          <button class="tab-btn" id="tab-register" onclick="switchTab('register')">Đăng ký</button>
+          <div class="tab-indicator" id="tab-indicator"></div>
+        </div>
+
+        <!-- ===== LOGIN FORM ===== -->
+        <div class="form-section" id="form-login">
+          <div class="form-header">
+            <h2 class="form-title">Chào mừng trở lại 👋</h2>
+            <p class="form-subtitle">Đăng nhập để tiếp tục tìm kiếm</p>
+          </div>
+
+          <div class="social-login">
+            <button class="social-btn" type="button">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"/>
+                <path d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.258c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z" fill="#34A853"/>
+                <path d="M3.964 10.707A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.707V4.961H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.039l3.007-2.332z" fill="#FBBC05"/>
+                <path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.961L3.964 7.293C4.672 5.166 6.656 3.58 9 3.58z" fill="#EA4335"/>
+              </svg>
+              Tiếp tục với Google
+            </button>
+          </div>
+
+          <div class="divider"><span>hoặc</span></div>
+
+          <div class="input-group">
+            <label class="input-label" for="login-email">Email</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M2 4l6 5 6-5M2 4h12v8H2V4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <input type="email" id="login-email" class="input-field" placeholder="ten@email.com" autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="label-row">
+              <label class="input-label" for="login-password">Mật khẩu</label>
+              <a href="#" class="forgot-link">Quên mật khẩu?</a>
+            </div>
+            <div class="input-wrapper">
+              <svg class="input-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M5 7V5a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <input type="password" id="login-password" class="input-field" placeholder="••••••••" autocomplete="current-password" />
+              <button class="toggle-pw" type="button" onclick="togglePassword('login-password', this)" aria-label="Hiện mật khẩu">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M8 3C4 3 1.333 8 1.333 8S4 13 8 13s6.667-5 6.667-5S12 3 8 3z" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="8" cy="8" r="2" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="remember-row">
+            <label class="checkbox-label">
+              <input type="checkbox" id="remember-me" />
+              <span class="checkbox-custom"></span>
+              Ghi nhớ đăng nhập
+            </label>
+          </div>
+
+          <button class="submit-btn" type="button" onclick="handleLogin()">
+            <span>Đăng nhập</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <p class="switch-hint">Chưa có tài khoản? <a href="#" onclick="switchTab('register'); return false;">Đăng ký ngay</a></p>
+        </div>
+
+        <!-- ===== REGISTER FORM ===== -->
+        <div class="form-section hidden" id="form-register">
+          <div class="form-header">
+            <h2 class="form-title">Tạo tài khoản 🏠</h2>
+            <p class="form-subtitle">Miễn phí, chỉ mất 1 phút</p>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label class="input-label" for="reg-firstname">Họ</label>
+              <div class="input-wrapper">
+                <input type="text" id="reg-firstname" class="input-field" placeholder="Nguyễn" autocomplete="given-name" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="reg-lastname">Tên</label>
+              <div class="input-wrapper">
+                <input type="text" id="reg-lastname" class="input-field" placeholder="Văn A" autocomplete="family-name" />
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label class="input-label" for="reg-email">Email</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M2 4l6 5 6-5M2 4h12v8H2V4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <input type="email" id="reg-email" class="input-field" placeholder="ten@email.com" autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label class="input-label" for="reg-phone">Số điện thoại</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 2h2l1 3-1.5 1.5c.8 1.6 2 2.8 3.5 3.5L10.5 8.5l3 1V12c0 1-1 2-2 1.5C5 11.5 2.5 6 4 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <input type="tel" id="reg-phone" class="input-field" placeholder="0901 234 567" autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label class="input-label" for="reg-password">Mật khẩu</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M5 7V5a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <input type="password" id="reg-password" class="input-field" placeholder="Tối thiểu 8 ký tự" autocomplete="new-password" oninput="checkPasswordStrength(this.value)" />
+              <button class="toggle-pw" type="button" onclick="togglePassword('reg-password', this)" aria-label="Hiện mật khẩu">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M8 3C4 3 1.333 8 1.333 8S4 13 8 13s6.667-5 6.667-5S12 3 8 3z" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="8" cy="8" r="2" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </button>
+            </div>
+            <div class="password-strength" id="pw-strength">
+              <div class="strength-bar"><div class="strength-fill" id="strength-fill"></div></div>
+              <span class="strength-label" id="strength-label"></span>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label class="input-label" for="reg-confirm">Xác nhận mật khẩu</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M5 7V5a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <input type="password" id="reg-confirm" class="input-field" placeholder="Nhập lại mật khẩu" autocomplete="new-password" />
+              <button class="toggle-pw" type="button" onclick="togglePassword('reg-confirm', this)" aria-label="Hiện mật khẩu">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M8 3C4 3 1.333 8 1.333 8S4 13 8 13s6.667-5 6.667-5S12 3 8 3z" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="8" cy="8" r="2" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="terms-row">
+            <label class="checkbox-label">
+              <input type="checkbox" id="agree-terms" />
+              <span class="checkbox-custom"></span>
+              Tôi đồng ý với <a href="#">Điều khoản</a> và <a href="#">Chính sách riêng tư</a>
+            </label>
+          </div>
+
+          <button class="submit-btn" type="button" onclick="handleRegister()">
+            <span>Tạo tài khoản</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <p class="switch-hint">Đã có tài khoản? <a href="#" onclick="switchTab('login'); return false;">Đăng nhập</a></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
